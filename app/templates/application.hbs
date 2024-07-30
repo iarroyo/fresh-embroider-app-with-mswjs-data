@@ -1,7 +1,9 @@
 {{page-title "FreshEmbroiderAppWithMswjsData"}}
 
-{{! The following component displays Ember's default welcome message. }}
-<WelcomePage />
-{{! Feel free to remove this! }}
+<ul>
+  {{#each @model.users as |user|}}
+    <li>{{user.name}} - {{user.email}}</li>
+  {{/each}}
+</ul>
 
 {{outlet}}
